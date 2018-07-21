@@ -1,15 +1,15 @@
-import React from "react";
-import {hot} from "react-hot-loader";
-import "./App.css";
+import React from 'react';
+import { AppRegistry, Text, View } from 'react-native';
+import styles from './App.style.js';
 
-class App extends React.Component{
-  render(){
-    return(
-      <div className="App">
-        <h1> Hello, World!</h1>
-      </div>
+class App extends React.Component {
+  render() {
+    return (
+      <View style={styles.box}>
+        <Text style={styles.text}>Hello, world!</Text>
+      </View>
     );
   }
 }
 
-export default hot(module)(App);
+AppRegistry.registerComponent('App', () => App);

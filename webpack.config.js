@@ -1,8 +1,10 @@
 const path = require("path");
 const webpack = require("webpack");
 
+console.log(process.env);
+
 module.exports = {
-  entry: ['./src/index.js'],
+  entry: ['./src/index.web.js'],
   mode: "development",
   module: {
     rules: [
@@ -20,10 +22,15 @@ module.exports = {
       }
     ]
   },
-  resolve: { extensions: ['*', '.js', '.jsx'] },
+    resolve: {
+        alias: {
+            "react-native$": "react-native-web"
+        },
+        extensions: ['*', '.jsx',  '.web.js', '.js' ]    
+     },
   output: {
     path: path.resolve(__dirname, "dist/"),
-    publicPath: "http://code.frank0631.com:34491/dist/",
+    publicPath: "/dist/",
     filename: "bundle.js"
   },
   devServer: {
