@@ -1,4 +1,11 @@
 {
-  "presets": ["env", "react-native"],
-  "plugins": ["react-hot-loader/babel"]
+  "presets": [ "react", "stage-3", "react-native"],
+  "plugins": [
+  	"react-hot-loader/babel", 
+  	"transform-class-properties", 
+	["transform-runtime", {
+	"polyfill": false,
+	"regenerator": true
+	}]
+  ]
 }

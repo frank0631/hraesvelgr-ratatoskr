@@ -7,5 +7,9 @@ export default StyleSheet.create({
   text: {
   	fontWeight: 'bold',
   	fontFamily: 'Arial'
+  	},  
+  links: {
+  	fontWeight: 'bold',
+  	fontFamily: 'Arial'
   	}
 });
