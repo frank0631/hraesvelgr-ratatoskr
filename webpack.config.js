@@ -1,10 +1,5 @@
 const path = require("path");
-const appDirectory = path.resolve(__dirname, '../');
 const webpack = require("webpack");
-
-//console.log(process.env);
-console.log(path.resolve(appDirectory, 'node_modules/react-router-native'));
-
 
 module.exports = {
   entry: ['./src/index.web.jsx'],
@@ -18,6 +13,12 @@ module.exports = {
         options: {
         	presets: ['env'],
       	},
+      },
+      {
+      	test: /\.js$/,
+	    include: [
+	        /node_modules\/nidhogg-jquery/
+	    ]
       },
 	  {
 	    // Most react-native libraries include uncompiled ES6 JS.
