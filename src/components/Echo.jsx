@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { Text, TextInput, View, Button } from 'react-native';
-import $ from 'jquery'
 
 var echo_service = require('nidhogg-jquery/gen-js/TEchoService.js') 
 
