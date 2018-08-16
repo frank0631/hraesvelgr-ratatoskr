@@ -38,7 +38,7 @@ class Customers extends Component {
 	
 	var customerList = 
 		this.state.customers.map(c => ( 
-		<Text key={c.id} >{c.firstName} {c.lastName}</Text>
+		<Text key={c.id} style={{padding: 10, fontSize: 42}} >{c.firstName} {c.lastName}</Text>
 		))    
 	
     return (
