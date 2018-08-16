@@ -12,7 +12,7 @@ class Calc extends Component {
     this.state = {
     	val1: '10' , 
     	val2: '5',
-    	operation: 'add',
+    	operation: TOperation.ADD,
     	result: ''};
     }
   
@@ -57,7 +57,6 @@ class Calc extends Component {
 	    
 	    <Picker
 		  selectedValue={this.state.operation}
-//		  style={{ height: 50, width: 100 }}
 		  onValueChange={(itemValue, itemIndex) => this.setState({operation: itemValue})}>
 		  <Picker.Item label="+" value={`${TOperation.ADD}`} />
 		  <Picker.Item label="-" value={`${TOperation.SUBTRACT}`} />
