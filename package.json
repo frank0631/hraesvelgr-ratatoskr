@@ -17,7 +17,9 @@
     "react-scripts": "^1.1.4"
   },
   "scripts": {
-    "start:dev": "node_modules/.bin/webpack-dev-server --mode development --host 0.0.0.0 --port 9000"
+    "start": "node_modules/.bin/webpack-dev-server --hot --inline --mode development --port 9000 --host 0.0.0.0 --colors",
+    "build": "node_modules/.bin/webpack --config webpack.prod.js",
+    "prod": "node server.js"
   },
   "keywords": [],
   "author": "frank0631",
