@@ -1,0 +1,17 @@
+sudo: required
+
+services:
+  - docker
+
+os:
+  - linux
+
+branches:
+  only:
+    - master
+
+script:
+  - docker build
+
+after_success:
+  - docker login -u $DOCKER_USER -p $DOCKER_PASS https://index.docker.io/v1/
