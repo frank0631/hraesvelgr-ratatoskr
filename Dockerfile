@@ -9,4 +9,4 @@ COPY dist .
 COPY *.js ./
 
 EXPOSE 80
-CMD [ "npm", "prod" ]
+CMD [ "npm", "", "prod" ]
