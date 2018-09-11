@@ -13,8 +13,10 @@ branches:
   only:
     - master
 
+before_install:
+  - echo "registry=http://artifact.frank0631.com:4873" > .npmrc
+  
 script:
-  - npm set registry http://artifact.frank0631.com:4873
   - npm install
   - npm run build
   - docker build .
