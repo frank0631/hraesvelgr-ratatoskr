@@ -15,7 +15,8 @@ class Customers extends Component {
     
 	componentDidMount() {
 		var customers = [];
-		var api = hybind("http://hraesvelgr.frank0631.com:9000/data");
+		var endpoint = HRAESVELGR_API_HOST +":"+ HRAESVELGR_API_PORT;
+		var api = hybind(endpoint+"/data");
 		api.$bind("customers", customers);
 		
 		customers.$load().then(function() {
@@ -44,6 +45,7 @@ class Customers extends Component {
     return (
       <View >
         <Text>Customers</Text>
+        
         {customerList}
       </View>
     );
