@@ -1,15 +1,13 @@
 const path = require("path");
 const webpack = require("webpack");
 
-const HRAESVELGR_API_HOST = process.env.HRAESVELGR_API_HOST || "http://hraesvelgr.frank0631.com";
-const HRAESVELGR_API_PORT = process.env.HRAESVELGR_API_PORT || "9000";
+const HRAESVELGR_API_ADDRESS = process.env.HRAESVELGR_API_ADDRESS || "http://hraesvelgr.frank0631.com:9000";
 
 module.exports = {
   entry: ['./src/index.web.jsx'],
   mode: "development",
   plugins: [
-      new webpack.DefinePlugin({ 'HRAESVELGR_API_HOST': JSON.stringify(API_HOST) }),
-      new webpack.DefinePlugin({ 'HRAESVELGR_API_PORT': JSON.stringify(API_PORT) })
+      new webpack.DefinePlugin({ 'HRAESVELGR_API_ADDRESS': JSON.stringify(HRAESVELGR_API_ADDRESS) })
       ],
   module: {
     rules: [

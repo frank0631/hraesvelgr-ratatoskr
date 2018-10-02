@@ -15,8 +15,7 @@ class Customers extends Component {
     
 	componentDidMount() {
 		var customers = [];
-		var endpoint = HRAESVELGR_API_HOST +":"+ HRAESVELGR_API_PORT;
-		var api = hybind(endpoint+"/data");
+		var api = hybind(HRAESVELGR_API_ADDRESS+"/data");
 		api.$bind("customers", customers);
 		
 		customers.$load().then(function() {

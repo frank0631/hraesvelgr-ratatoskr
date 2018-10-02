@@ -11,8 +11,7 @@ class Echo extends Component {
   }
 
  echo() {
-	var endpoint = HRAESVELGR_API_HOST +":"+ HRAESVELGR_API_PORT;
- 	var transport = new Thrift.TXHRTransport(endpoint+"/thrift/echo");
+ 	var transport = new Thrift.TXHRTransport(HRAESVELGR_API_ADDRESS+"/thrift/echo");
     var protocol  = new Thrift.TJSONProtocol(transport);
     var client    = new TEchoServiceClient(protocol);
     

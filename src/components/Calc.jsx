@@ -29,8 +29,7 @@ class Calc extends Component {
 	}
 	
  calc() {
- 	var endpoint = HRAESVELGR_API_HOST +":"+ HRAESVELGR_API_PORT;
- 	var transport = new Thrift.TXHRTransport(endpoint+"/thrift/calculator");
+ 	var transport = new Thrift.TXHRTransport(HRAESVELGR_API_ADDRESS+"/thrift/calculator");
     var protocol  = new Thrift.TJSONProtocol(transport);
     var client    = new TCalculatorServiceClient(protocol);
     
