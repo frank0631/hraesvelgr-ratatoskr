@@ -10,7 +10,7 @@ class Calc extends Component {
   constructor(props) {
     super(props);
     this.state = {
-    	val1: '10' , 
+    	val1: '10', 
     	val2: '5',
     	operation: TOperation.ADD,
     	result: ''};
